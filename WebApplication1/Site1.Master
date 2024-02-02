@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html">
+
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="Bootstrap/css/cdn.jsdelivr.net_npm_bootstrap@4.3.1_dist_css_bootstrap.min.css" rel="stylesheet" />
+    <%--datatable css--%>
+    <link href="datatables/css/cdn.datatables.net_1.13.5_css_jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome-free/css/all.css" rel="stylesheet" />
+    <%--my custom css--%>
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+    <%-- cjquary js--%>
+    <script src="Bootstrap/js/code.jquery.com_jquery-3.3.1.slim.min.js"></script>
+    <%--proper js--%>
+    <script src="Bootstrap/js/cdn.jsdelivr.net_npm_popper.js@1.14.7_dist_umd_popper.min.js"></script>
+    <%-- bootstrap js--%>
+    <script src="Bootstrap/js/cdn.jsdelivr.net_npm_bootstrap@4.3.1_dist_js_bootstrap.min.js"></script>
+    <%-- datatables js--%><script src="datatables/js/cdn.datatables.net_1.13.5_js_jquery.dataTables.min.js"></script>
+    <script src="Bootstrap/js/cdn.jsdelivr.net_npm_bootstrap@4.3.1_dist_js_bootstrap.min.js"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+
+    <form id="form1" runat="server">
+        
+        <div>
+            <nav class= "navbar navbar-expand-lg navbar-light">
+            
+             <a class="navbar-brand" href="#">
+                    <img src="img/books.png" width="30" height="30" />
+                    Wiki Library
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="homepage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Terms</a>
+                        </li>
+
+
+                    </ul>
+    
+  
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">View Books</asp:LinkButton>
+                        </li>
+                        
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                        </li>
+                         
+                       
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">Logout</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">Hello user</asp:LinkButton>
+
+                        </li>
+                        <li>
+                             
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+             <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click1">Admin Login</asp:LinkButton>
+                            &nbsp;
+                           
+                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" OnClick="LinkButton11_Click" Visible="False">Author Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="False">Publisher Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click" Visible="False">Book Inventory</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" OnClick="LinkButton9_Click" Visible="False">Book Issuing</asp:LinkButton>
+                            &nbsp;
+                             <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" OnClick="LinkButton10_Click1" Visible="False">Member Management</asp:LinkButton>
+                        </p>
+                         
+       
+                      
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+                <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           
+                </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+         
+        
+           
+
+        
+        <!-- ./Footer -->
+    </form>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy All right Reversed. <a class="footerlinks" href="#" target="_blank">Wiki Library project</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </body>
+</html>
